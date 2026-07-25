@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Publications — {{ site.name }}{% endblock %}
+{% block description %}Journal articles and conference papers by {{ site.name }}.{% endblock %}
+
+{% macro pub_list(items) %}
+<ol class="pubs">
+  {% for pub in items %}
+  <li class="pub">
+    <div class="pub-meta"><span class="year">{{ pub.year }}</span><span class="kind">{{ pub.tag }}</span></div>
+    <div>
+      <h3>{{ pub.title|safe }}</h3>
+      <p class="authors">{{ pub.authors|safe }}</p>
+      <p class="venue">{{ pub.venue|safe }}</p>
+      {% if pub.links %}
+      <p class="pub-links">
+        {% for link in pub.links %}<a href="{{ link.href }}">{{ link.label }}</a>{% endfor %}
+      </p>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% endmacro %}
+
+{% block content %}
+
+  <section class="page-intro">
+    <div class="wrap">
+      <h1>Publications</h1>
+      <p class="lede">{{ publications.total }} peer-reviewed papers and abstracts. A live list is on
+        {% for link in site.profiles %}{% if link.label in ['Google Scholar', 'ORCID'] %}<a href="{{ link.href }}">{{ link.label }}</a>{% if not loop.last %} and {% endif %}{% endif %}{% endfor %},
+        and the full list is available as <a href="static/files/publications.bib">BibTeX</a>.</p>
+    </div>
+  </section>
+
+  {% if publications.journals %}
+  <section class="section reveal">
+    <div class="wrap">
+      <h2 class="section-title">Journal articles</h2>
+      {{ pub_list(publications.journals) }}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if publications.conferences %}
+  <section class="section reveal">
+    <div class="wrap">
+      <h2 class="section-title">Conference articles &amp; abstracts</h2>
+      {{ pub_list(publications.conferences) }}
+    </div>
+  </section>
+  {% endif %}
+
+{% endblock %}

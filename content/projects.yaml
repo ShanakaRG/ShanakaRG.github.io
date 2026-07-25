@@ -1,0 +1,226 @@
+# ---------------------------------------------------------------------------
+# Research projects, newest first. The order here is the order on the page and
+# in the sidebar index.
+#
+# Fields for each project:
+#   slug:          the anchor in the URL, e.g. research.html#elephant
+#   title:         heading
+#   short:         shorter label for the sidebar (optional)
+#   when:          year or range
+#   kind:          e.g. graduate research, undergraduate research (optional)
+#   objective:     what the project set out to do
+#   approach:      what you actually did
+#   outcome:       results, prizes, publications (optional)
+#   funding:       grants and sponsors (optional)
+#   collaborators: list of names
+#   images:        list of {file, alt, caption} — file is relative to static/
+#   files:         list of {label, file}       — file is relative to static/
+#   links:         list of {label, href}       — external URLs
+#
+# Text fields accept blank lines for paragraphs, [text](url) for links,
+# **bold** and *italic*.
+# ---------------------------------------------------------------------------
+
+- slug: elephant
+  title: Elephant–train collision prevention system
+  short: Elephant–train collision prevention
+  when: 2020 – ongoing
+  kind: graduate research
+  objective: >-
+    Develop a sensor unit and associated algorithms that detect elephants on or
+    near a train track at a distance sufficient for the driver to react. The unit
+    combines a Jetson Xavier computing platform, a laser range finder, a
+    wide-angle camera, an infrared camera and a 3G/4G modem, powered by a
+    solar-charged lithium-ion battery pack.
+  approach: >-
+    A Reolink infrared night-detection camera module was selected as the sensor
+    unit and a YOLOv3 Darknet model used for detection. A custom dataset was
+    collected and transfer learning applied on top of YOLOv3 weights. When an
+    elephant is detected on the track, an alert is transmitted to the train
+    driver and to nearby railway stations.
+  funding: >-
+    IEEE Special Interest Group on Humanitarian Technology (SIGHT), Robotics and
+    Automation Society (RAS), USA · [NVIDIA Applied Research Accelerator
+    Program](https://www.nvidia.com/en-us/industries/higher-education-research/applied-research-program/).
+  collaborators:
+    - Prof. Lilantha Samaranayake — University of Peradeniya
+    - Prof. Kithsiri M. Liyanage — University of Peradeniya
+    - Dr. Nalin Harischandra — University of Peradeniya
+    - Dr. Tharindu Weerakoon — University of Peradeniya
+    - Dr. Parakrama Ekanayake — University of Peradeniya
+    - Prof. Gamini Dissanayake — University of Technology Sydney
+    - Dr. Ravindra Ranasinghe — University of Technology Sydney
+    - Mr. Maleen Jayasuriya — University of Technology Sydney
+  # Drop your images into static/img/projects/ then uncomment and rename:
+  # images:
+  #   - file: img/projects/elephant/detection.png
+  #     alt: YOLOv3 detecting an elephant beside a railway track at night
+  #     caption: Night-time detection from the infrared camera
+  # Drop your slides into static/files/slides/ then uncomment:
+  # files:
+  #   - label: Slides (PPTX)
+  #     file: files/slides/elephant-train-collision-prevention.pptx
+  links:
+    - label: Video presentation
+      href: https://www.youtube.com/watch?v=EYgjwJCvd00
+    - label: ICIIS 2021 paper
+      href: https://ieeexplore.ieee.org/document/9660651
+
+- slug: cnn
+  title: Modifying CNN architectures for better performance
+  short: Modified CNN architecture
+  when: "2020"
+  kind: graduate research
+  objective: >-
+    Convolutional neural networks remain expensive to train, and the cost grows
+    sharply with network size. This project asks whether the existing
+    architecture can be modified to improve the trade-off between computational
+    cost and accuracy.
+  approach: >-
+    Training deep networks has traditionally been difficult because vanishing
+    gradients leave layers near the input effectively unchanged by errors
+    computed on the training set. We are developing a cascaded layer-wise
+    training architecture intended to reduce computational cost and mitigate the
+    vanishing gradient problem. The work is at an early stage — literature
+    review and testing of a small number of models.
+  collaborators:
+    - Prof. Mahesan Niranjan — University of Southampton, UK
+    - Dr. Maheshi B. Dissanayake — University of Peradeniya
+
+- slug: manipulator
+  title: Controller design for a robot manipulator
+  short: Robot manipulator controller
+  when: 2019 – 2020
+  kind: graduate research
+  objective: >-
+    Build a complete mathematical model of a 5-DOF robot manipulator using
+    forward and inverse kinematics, then implement a decoupling control system
+    to improve smoothness and efficiency.
+  approach: >-
+    The PUMA 560 is a commercially available 6-DOF manipulator. Reverse
+    engineering was used to derive a full forward and inverse kinematic model.
+    Individual joint controllers were then implemented for all five joints,
+    followed by a decoupling control system. The model was tested successfully in
+    MATLAB Simulink using SimMechanics. The project was sponsored by GPV Lanka
+    (Pvt) Ltd.
+  collaborators:
+    - Prof. Lilantha Samaranayake
+    - Dr. Nalin Harischandra
+  # files:
+  #   - label: Slides (PPTX)
+  #     file: files/slides/gpv-lead-tinning-robotic-solution.pptx
+  links:
+    - label: ICIIS 2021 paper
+      href: https://ieeexplore.ieee.org/document/9660686
+
+- slug: tactile
+  title: Active tactile sensor — an insect-inspired bionic antenna
+  short: Active tactile sensor
+  when: 2018 – 2019
+  kind: undergraduate research
+  objective: >-
+    Improve the accuracy of existing distance-estimation methods, compare
+    artificial neural network and support vector machine performance, and
+    identify the cause of anomalous behaviour at the antenna tip.
+  approach: |-
+    Many animals carry actively movable tactile sensors on their heads to explore near-range space; during locomotion an antenna is used to detect, localise, probe and negotiate obstacles. The sensor here was inspired by the antenna of the stick insect and detects an obstacle and its location in three dimensions. The probe must be vibration-sensitive and compliant, yet stiff enough to hold its shape during self-vibration, and soft enough not to damage the obstacle it taps.
+
+    An MPU6050 accelerometer at the antenna tip collected vibration data, with a Raspberry Pi 3 running motor control, data acquisition and the machine learning models in Python. Vibration signals were analysed in the frequency domain using the FFT to estimate distance, and signal processing, ANN and SVM approaches were compared for both distance estimation and material classification.
+
+    Accuracy degraded towards the tip of the probe, where vibration data has high variance. Modelling the probe with Euler–Bernoulli beam theory showed a change in vibration mode near the tip, with multiple modes appearing — a result then verified experimentally. Because the Fourier transform discards time information, wavelet-based algorithms were used to analyse the mode changes.
+  outcome: >-
+    A robotic solution for metal waste classification built on this sensor —
+    METABOT, a metal tactile robot — won the IEEE R10 Asia-Pacific Humanitarian
+    Robotics Challenge 2018. The work was recognised by the Institution of
+    Engineers, Sri Lanka as one of the best electrical and electronic
+    undergraduate projects in the country, and was selected among the best five
+    undergraduate research projects in the department.
+  collaborators:
+    - H. N. T. K. Kaldera
+    - Prof. Lilantha Samaranayake
+    - Dr. Nalin Harischandra
+  links:
+    - label: Project site
+      href: https://sites.google.com/eng.pdn.ac.lk/activetactilesensor/home
+    - label: Thesis
+      href: https://www.researchgate.net/publication/347524158_Active_Tactile_Sensor_Insect_Inspired_Bionic_Antenna
+
+- slug: tumour
+  title: Brain tumour identification and segmentation
+  short: Brain tumour segmentation
+  when: 2018 – 2019
+  objective: >-
+    Develop a machine learning method to classify, localise and segment brain
+    tumours in MRI at low computational cost, and evaluate the result
+    subjectively with clinicians.
+  approach: |-
+    Primary brain tumours may be malignant or benign; among them, gliomas are the most common and high-grade gliomas carry a poor prognosis. This work addresses fully automated classification and segmentation of MRI containing both glioma and meningioma tumours, using a CNN for classification and a Faster R-CNN combined with edge detection for segmentation.
+
+    Trained on 218 images, the system reached 100% accuracy on meningioma and 87.5% on glioma classification, with an average confidence above 94% in segmentation. Further analysis gave average detection accuracy, sensitivity, Dice score and confidence level of 99.81%, 87.72%, 91.14% and 93.6% respectively. Subjective quality evaluation was carried out with neurologists, medical officers and intern house officers, following ITU recommendations.
+  collaborators:
+    - H. N. T. K. Kaldera
+    - Dr. Maheshi B. Dissanayake
+  links:
+    - label: Journal of Healthcare Engineering
+      href: https://doi.org/10.1155/2021/6695108
+    - label: ResearchGate
+      href: https://www.researchgate.net/publication/347524197_Tumor_Segmentation_using_Deep_Learning_Algorithms_for_Magnetic_Resonance_Imaging
+
+- slug: codec
+  title: Image and video codec using a Huffman algorithm
+  short: Image and video codec
+  when: "2018"
+  kind: individual project, EE596 Image and Video Coding
+  objective: >-
+    Implement a Huffman algorithm for image compression, then build an encoder
+    and decoder for video transmission on top of it.
+  approach: |-
+    Hybrid video coding combines predictive and transform coding and underlies modern standards such as H.26x, MPEG-2/4, AVS and HEVC. This project implemented a simplified hybrid codec with discrete cosine transformation, quantisation, prediction and entropy coding, using a Huffman algorithm written from scratch for the entropy coding stage.
+
+    An image was first coded across all three layers and decoded successfully, with quality compared across quantisation levels. YUV video was then encoded and decoded with macroblock-based coding, basic motion estimation and intra prediction. The quantisation process was optimised for transmission in a fixed-bandwidth environment, using optimisation analysis to find the QP that meets a given bit rate. The entire project was written in MATLAB.
+  collaborators:
+    - Dr. Maheshi B. Dissanayake (supervisor)
+  # files:
+  #   - label: Slides (PPTX)
+  #     file: files/slides/image-video-codec.pptx
+
+- slug: mppt
+  title: Maximum power point tracking device
+  short: Maximum power point tracker
+  when: "2017"
+  kind: third-year mini research project
+  objective: >-
+    Develop an algorithm based on the perturb and observe method to maximise
+    photovoltaic array output power.
+  approach: |-
+    Tracking the maximum power point of a PV array is difficult because its I–V characteristic is nonlinear and depends on temperature and irradiation. With the standard perturb and observe method, the operating point converges towards the optimum but then oscillates around it rather than settling. The proposed method applies adaptive delta modulation to reduce that oscillation, and uses the PV array output to control the DC/DC converter directly, reducing system complexity.
+
+    Panel voltage, panel current, output power and battery voltage were transmitted to the main board over UART. A custom protocol was developed for this link: each byte carries a tag in the high nibble and a data value in the low nibble.
+  outcome: >-
+    Published at the IET Present Around the World technical conference 2018,
+    University of Moratuwa, where it took third place in the best paper presenter
+    category.
+  collaborators:
+    - N. M. S. Silva
+    - W. A. L. H. Wickramanayake
+  # files:
+  #   - label: Report (PDF)
+  #     file: files/papers/maximum-power-point-tracking.pdf
+  links:
+    - label: Paper
+      href: https://www.researchgate.net/publication/347524486_Maximum_Power_Point_Tracking_Device
+
+- slug: guitar
+  title: Ghost Guitar
+  when: "2017"
+  kind: Access Hackathon
+  objective: >-
+    Design a device that plugs into any guitar and lets it be played with one
+    hand.
+  approach: >-
+    Built for people who have use of a single hand and still want to play. The
+    device produces any strumming pattern from user input, leaving the player to
+    change chords with their one free hand.
+  collaborators:
+    - N. M. S. Silva
+    - R. T. Munasinghe

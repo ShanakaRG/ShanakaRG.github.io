@@ -1,0 +1,20 @@
+# Two lists: awards (honours, scholarships, competition wins) and training.
+# Links: [text](url).  Bold: **text**.
+
+awards:
+  - "**Full PhD scholarship** — to conduct research towards a doctoral degree in computer science and artificial intelligence, University of Wollongong, Australia."
+  - "**Full travel grant** — to represent Sri Lanka in the [JENESYS 2020](https://jaif.asean.org/jaif-component/jenesys-2020/) second-batch programme, organised by the Government of Japan."
+  - "**Winner, IEEE R10 Asia-Pacific Humanitarian Robotics Challenge 2018** (open category) — METABOT: a metal tactile robot based on active sensing. 6th IEEE Region 10 Humanitarian Technology Conference, Colombo, 6–8 December 2018."
+  - "**Best undergraduate project recognition, IESL** — the [active tactile sensor research](research.html#tactile) was recognised by the Institution of Engineers, Sri Lanka as one of the best electrical and electronic undergraduate projects in the country."
+  - "**Top five undergraduate research projects** — Department of Electrical and Electronic Engineering, University of Peradeniya, for the [active tactile sensor](research.html#tactile) project."
+  - "**Third place, best presenter** — \u201cMaximum Power Point Tracking Device\u201d, IET Present Around the World 2018 Annual Technical Conference, Moratuwa, Sri Lanka, 12 May 2018."
+  - "**Winner, IEEE Circuit Design Competition 2016** — organised by the IEEE Sri Lanka Section; the task, set and evaluated by the University of Moratuwa, was to design a 10 W hi-fi amplifier."
+  - "**University Colours** — awarded for hockey in 2015, 2016, 2017 and 2018."
+  - "**Mahapola Scholarship** — for meritorious performance at G.C.E. Advanced Level (2013)."
+  - "**[Ceylinco Randaru Pranama Scholarship](https://www.ceylincolife.com/life-rewards/pranama-scholorships/)** — for meritorious performance at G.C.E. Advanced Level (2013)."
+  - "**[Dialog Merit Scholarship](https://dialogfoundation.org/what-we-do/dialog-merit-scholarships/)** — for best performance in mathematics at G.C.E. Ordinary Level (2009)."
+
+training:
+  - "**IEEE Training School on Machine Learning for Wireless Communications** — School of Computer Science and Robotics, Tomsk Polytechnic University, Tomsk, Russia, 24–26 March 2021."
+  - "**Machine learning workshop** — 2019 IEEE 14th International Conference on Industrial and Information Systems (ICIIS)."
+  - "**Workshop on Humanitarian Robotics** — IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2020), 9 November 2020."

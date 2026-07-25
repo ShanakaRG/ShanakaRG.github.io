@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Shanaka Ramesh Gunasekara</title>
+<meta name="description" content="Research projects in computer vision, machine learning, medical image analysis and robotics by Shanaka Ramesh Gunasekara.">
+<meta name="author" content="Shanaka Ramesh Gunasekara">
+<meta property="og:title" content="Shanaka Ramesh Gunasekara">
+<meta property="og:description" content="Shanaka Ramesh Gunasekara is a PhD candidate at the Advanced Multimedia Research Lab, University of Wollongong, working on 3D human action recognition, computer vision and machine learning.">
+<meta property="og:type" content="website">
+<link rel="icon" href="static/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/style.css">
+<script>
+  (function(){var t;try{t=localStorage.getItem('theme');}catch(e){}
+   if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}
+   document.documentElement.setAttribute('data-theme',t);
+   document.documentElement.classList.add('js');})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img class="mark" src="static/img/favicon.svg" alt="" width="20" height="20">
+      <span>Shanaka Ramesh Gunasekara</span>
+    </a>
+    <div class="nav-wrap">
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="background.html">Background</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="awards.html">Awards</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" aria-label="Switch theme" title="Toggle light/dark">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-intro">
+    <div class="wrap">
+      <h1>Research</h1>
+      <p class="lede">Computer vision, artificial intelligence, machine learning, robotics and automation, across a set of interrelated problems. 8 projects, most recent first.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap research-layout">
+
+      <nav class="proj-index" aria-label="Projects">
+        <ol>
+          <li><a href="#elephant">Elephant–train collision prevention</a></li>
+          <li><a href="#cnn">Modified CNN architecture</a></li>
+          <li><a href="#manipulator">Robot manipulator controller</a></li>
+          <li><a href="#tactile">Active tactile sensor</a></li>
+          <li><a href="#tumour">Brain tumour segmentation</a></li>
+          <li><a href="#codec">Image and video codec</a></li>
+          <li><a href="#mppt">Maximum power point tracker</a></li>
+          <li><a href="#guitar">Ghost Guitar</a></li>
+        </ol>
+      </nav>
+
+      <div>
+        <article class="project reveal" id="elephant">
+          <h2>Elephant–train collision prevention system</h2>
+          <p class="when">2020 – ongoing · graduate research</p>
+
+
+<h4>Objective</h4><p>Develop a sensor unit and associated algorithms that detect elephants on or near a train track at a distance sufficient for the driver to react. The unit combines a Jetson Xavier computing platform, a laser range finder, a wide-angle camera, an infrared camera and a 3G/4G modem, powered by a solar-charged lithium-ion battery pack.</p><h4>Approach</h4><p>A Reolink infrared night-detection camera module was selected as the sensor unit and a YOLOv3 Darknet model used for detection. A custom dataset was collected and transfer learning applied on top of YOLOv3 weights. When an elephant is detected on the track, an alert is transmitted to the train driver and to nearby railway stations.</p><h4>Funding</h4><p>IEEE Special Interest Group on Humanitarian Technology (SIGHT), Robotics and Automation Society (RAS), USA · <a href="https://www.nvidia.com/en-us/industries/higher-education-research/applied-research-program/">NVIDIA Applied Research Accelerator Program</a>.</p>
+          <h4>Collaborators</h4>
+          <p class="people">
+<span>Prof. Lilantha Samaranayake — University of Peradeniya</span><span>Prof. Kithsiri M. Liyanage — University of Peradeniya</span><span>Dr. Nalin Harischandra — University of Peradeniya</span><span>Dr. Tharindu Weerakoon — University of Peradeniya</span><span>Dr. Parakrama Ekanayake — University of Peradeniya</span><span>Prof. Gamini Dissanayake — University of Technology Sydney</span><span>Dr. Ravindra Ranasinghe — University of Technology Sydney</span><span>Mr. Maleen Jayasuriya — University of Technology Sydney</span>          </p>
+
+          <h4>Files &amp; links</h4>
+          <p class="pub-links">
+<a href="https://www.youtube.com/watch?v=EYgjwJCvd00">Video presentation</a><a href="https://ieeexplore.ieee.org/document/9660651">ICIIS 2021 paper</a>          </p>
+        </article>
+        <article class="project reveal" id="cnn">
+          <h2>Modifying CNN architectures for better performance</h2>
+          <p class="when">2020 · graduate research</p>
+
+
+<h4>Objective</h4><p>Convolutional neural networks remain expensive to train, and the cost grows sharply with network size. This project asks whether the existing architecture can be modified to improve the trade-off between computational cost and accuracy.</p><h4>Approach</h4><p>Training deep networks has traditionally been difficult because vanishing gradients leave layers near the input effectively unchanged by errors computed on the training set. We are developing a cascaded layer-wise training architecture intended to reduce computational cost and mitigate the vanishing gradient problem. The work is at an early stage — literature review and testing of a small number of models.</p>
+          <h4>Collaborators</h4>
+          <p class="people">
+<span>Prof. Mahesan Niranjan — University of Southampton, UK</span><span>Dr. Maheshi B. Dissanayake — University of Peradeniya</span>          </p>
+
+        </article>
+        <article class="project reveal" id="manipulator">
+          <h2>Controller design for a robot manipulator</h2>
+          <p class="when">2019 – 2020 · graduate research</p>
+
+
+<h4>Objective</h4><p>Build a complete mathematical model of a 5-DOF robot manipulator using forward and inverse kinematics, then implement a decoupling control system to improve smoothness and efficiency.</p><h4>Approach</h4><p>The PUMA 560 is a commercially available 6-DOF manipulator. Reverse engineering was used to derive a full forward and inverse kinematic model. Individual joint controllers were then implemented for all five joints, followed by a decoupling control system. The model was tested successfully in MATLAB Simulink using SimMechanics. The project was sponsored by GPV Lanka (Pvt) Ltd.</p>
+          <h4>Collaborators</h4>
+          <p class="people">
+<span>Prof. Lilantha Samaranayake</span><span>Dr. Nalin Harischandra</span>          </p>
+
+          <h4>Files &amp; links</h4>
+          <p class="pub-links">
+<a href="https://ieeexplore.ieee.org/document/9660686">ICIIS 2021 paper</a>          </p>
+        </article>
+        <article class="project reveal" id="tactile">
+          <h2>Active tactile sensor — an insect-inspired bionic antenna</h2>
+          <p class="when">2018 – 2019 · undergraduate research</p>
+
+
+<h4>Objective</h4><p>Improve the accuracy of existing distance-estimation methods, compare artificial neural network and support vector machine performance, and identify the cause of anomalous behaviour at the antenna tip.</p><h4>Approach</h4><p>Many animals carry actively movable tactile sensors on their heads to explore near-range space; during locomotion an antenna is used to detect, localise, probe and negotiate obstacles. The sensor here was inspired by the antenna of the stick insect and detects an obstacle and its location in three dimensions. The probe must be vibration-sensitive and compliant, yet stiff enough to hold its shape during self-vibration, and soft enough not to damage the obstacle it taps.</p>
+<p>An MPU6050 accelerometer at the antenna tip collected vibration data, with a Raspberry Pi 3 running motor control, data acquisition and the machine learning models in Python. Vibration signals were analysed in the frequency domain using the FFT to estimate distance, and signal processing, ANN and SVM approaches were compared for both distance estimation and material classification.</p>
+<p>Accuracy degraded towards the tip of the probe, where vibration data has high variance. Modelling the probe with Euler–Bernoulli beam theory showed a change in vibration mode near the tip, with multiple modes appearing — a result then verified experimentally. Because the Fourier transform discards time information, wavelet-based algorithms were used to analyse the mode changes.</p><h4>Outcome</h4><p>A robotic solution for metal waste classification built on this sensor — METABOT, a metal tactile robot — won the IEEE R10 Asia-Pacific Humanitarian Robotics Challenge 2018. The work was recognised by the Institution of Engineers, Sri Lanka as one of the best electrical and electronic undergraduate projects in the country, and was selected among the best five undergraduate research projects in the department.</p>
+          <h4>Collaborators</h4>
+          <p class="people">
+<span>H. N. T. K. Kaldera</span><span>Prof. Lilantha Samaranayake</span><span>Dr. Nalin Harischandra</span>          </p>
+
+          <h4>Files &amp; links</h4>
+          <p class="pub-links">
+<a href="https://sites.google.com/eng.pdn.ac.lk/activetactilesensor/home">Project site</a><a href="https://www.researchgate.net/publication/347524158_Active_Tactile_Sensor_Insect_Inspired_Bionic_Antenna">Thesis</a>          </p>
+        </article>
+        <article class="project reveal" id="tumour">
+          <h2>Brain tumour identification and segmentation</h2>
+          <p class="when">2018 – 2019</p>
+
+
+<h4>Objective</h4><p>Develop a machine learning method to classify, localise and segment brain tumours in MRI at low computational cost, and evaluate the result subjectively with clinicians.</p><h4>Approach</h4><p>Primary brain tumours may be malignant or benign; among them, gliomas are the most common and high-grade gliomas carry a poor prognosis. This work addresses fully automated classification and segmentation of MRI containing both glioma and meningioma tumours, using a CNN for classification and a Faster R-CNN combined with edge detection for segmentation.</p>
+<p>Trained on 218 images, the system reached 100% accuracy on meningioma and 87.5% on glioma classification, with an average confidence above 94% in segmentation. Further analysis gave average detection accuracy, sensitivity, Dice score and confidence level of 99.81%, 87.72%, 91.14% and 93.6% respectively. Subjective quality evaluation was carried out with neurologists, medical officers and intern house officers, following ITU recommendations.</p>
+          <h4>Collaborators</h4>
+          <p class="people">
+<span>H. N. T. K. Kaldera</span><span>Dr. Maheshi B. Dissanayake</span>          </p>
+
+          <h4>Files &amp; links</h4>
+          <p class="pub-links">
+<a href="https://doi.org/10.1155/2021/6695108">Journal of Healthcare Engineering</a><a href="https://www.researchgate.net/publication/347524197_Tumor_Segmentation_using_Deep_Learning_Algorithms_for_Magnetic_Resonance_Imaging">ResearchGate</a>          </p>
+        </article>
+        <article class="project reveal" id="codec">
+          <h2>Image and video codec using a Huffman algorithm</h2>
+          <p class="when">2018 · individual project, EE596 Image and Video Coding</p>
+
+
+<h4>Objective</h4><p>Implement a Huffman algorithm for image compression, then build an encoder and decoder for video transmission on top of it.</p><h4>Approach</h4><p>Hybrid video coding combines predictive and transform coding and underlies modern standards such as H.26x, MPEG-2/4, AVS and HEVC. This project implemented a simplified hybrid codec with discrete cosine transformation, quantisation, prediction and entropy coding, using a Huffman algorithm written from scratch for the entropy coding stage.</p>
+<p>An image was first coded across all three layers and decoded successfully, with quality compared across quantisation levels. YUV video was then encoded and decoded with macroblock-based coding, basic motion estimation and intra prediction. The quantisation process was optimised for transmission in a fixed-bandwidth environment, using optimisation analysis to find the QP that meets a given bit rate. The entire project was written in MATLAB.</p>
+          <h4>Collaborators</h4>
+          <p class="people">
+<span>Dr. Maheshi B. Dissanayake (supervisor)</span>          </p>
+
+        </article>
+        <article class="project reveal" id="mppt">
+          <h2>Maximum power point tracking device</h2>
+          <p class="when">2017 · third-year mini research project</p>
+
+
+<h4>Objective</h4><p>Develop an algorithm based on the perturb and observe method to maximise photovoltaic array output power.</p><h4>Approach</h4><p>Tracking the maximum power point of a PV array is difficult because its I–V characteristic is nonlinear and depends on temperature and irradiation. With the standard perturb and observe method, the operating point converges towards the optimum but then oscillates around it rather than settling. The proposed method applies adaptive delta modulation to reduce that oscillation, and uses the PV array output to control the DC/DC converter directly, reducing system complexity.</p>
+<p>Panel voltage, panel current, output power and battery voltage were transmitted to the main board over UART. A custom protocol was developed for this link: each byte carries a tag in the high nibble and a data value in the low nibble.</p><h4>Outcome</h4><p>Published at the IET Present Around the World technical conference 2018, University of Moratuwa, where it took third place in the best paper presenter category.</p>
+          <h4>Collaborators</h4>
+          <p class="people">
+<span>N. M. S. Silva</span><span>W. A. L. H. Wickramanayake</span>          </p>
+
+          <h4>Files &amp; links</h4>
+          <p class="pub-links">
+<a href="https://www.researchgate.net/publication/347524486_Maximum_Power_Point_Tracking_Device">Paper</a>          </p>
+        </article>
+        <article class="project reveal" id="guitar">
+          <h2>Ghost Guitar</h2>
+          <p class="when">2017 · Access Hackathon</p>
+
+
+<h4>Objective</h4><p>Design a device that plugs into any guitar and lets it be played with one hand.</p><h4>Approach</h4><p>Built for people who have use of a single hand and still want to play. The device produces any strumming pattern from user input, leaving the player to change chords with their one free hand.</p>
+          <h4>Collaborators</h4>
+          <p class="people">
+<span>N. M. S. Silva</span><span>R. T. Munasinghe</span>          </p>
+
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>© <span id="year"></span> Shanaka Ramesh Gunasekara</p>
+    <div class="foot-links">
+<a href="index.html">Home</a><a href="background.html">Background</a><a href="publications.html">Publications</a><a href="awards.html">Awards</a><a href="index.html#contact">Contact</a>    </div>
+  </div>
+</footer>
+
+<script src="static/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

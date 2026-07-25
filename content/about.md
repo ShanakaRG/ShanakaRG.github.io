@@ -1,0 +1,5 @@
+I am a PhD candidate at the [Advanced Multimedia Research Lab](https://www.uow.edu.au/engineering-information-sciences/research/signals-information-and-communications-research-institute-sicom/), [University of Wollongong](https://www.uow.edu.au/), Australia, where my work centres on 3D human action recognition using transformer networks and deep learning on video and skeleton data.
+
+Before Wollongong, I was a research engineer and temporary instructor in the [Department of Electrical and Electronic Engineering](http://eng.pdn.ac.lk/deee/index.php) at the [University of Peradeniya](http://www.pdn.ac.lk/), Sri Lanka, where I also completed my B.Sc.Eng (Hons) in Electrical and Electronic Engineering in 2019. That work spanned medical image analysis, low-light object detection, and control systems for robot manipulators.
+
+My research interests sit at the intersection of medical image analysis, machine learning, computer vision and control robotics — with a recurring interest in systems that have to work outside the lab, on real hardware, in poor light, at a distance.

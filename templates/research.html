@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Research — {{ site.name }}{% endblock %}
+{% block description %}Research projects in computer vision, machine learning, medical image analysis and robotics by {{ site.name }}.{% endblock %}
+
+{% block content %}
+
+  <section class="page-intro">
+    <div class="wrap">
+      <h1>Research</h1>
+      <p class="lede">{{ site.research_intro }} {{ projects|length }} projects, most recent first.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap research-layout">
+
+      <nav class="proj-index" aria-label="Projects">
+        <ol>
+          {% for project in projects %}
+          <li><a href="#{{ project.slug }}">{{ project.short or project.title }}</a></li>
+          {% endfor %}
+        </ol>
+      </nav>
+
+      <div>
+        {% for project in projects %}
+        <article class="project reveal" id="{{ project.slug }}">
+          <h2>{{ project.title }}</h2>
+          <p class="when">{{ project.when }}{% if project.kind %} · {{ project.kind }}{% endif %}</p>
+
+          {% if project.images %}
+          <div class="proj-media">
+            {% for image in project.images %}
+            <figure>
+              <img src="static/{{ image.file }}" alt="{{ image.alt }}" loading="lazy">
+              {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+            </figure>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if project.objective_html %}<h4>Objective</h4>{{ project.objective_html|safe }}{% endif %}
+          {% if project.approach_html %}<h4>Approach</h4>{{ project.approach_html|safe }}{% endif %}
+          {% if project.outcome_html %}<h4>Outcome</h4>{{ project.outcome_html|safe }}{% endif %}
+          {% if project.funding_html %}<h4>Funding</h4>{{ project.funding_html|safe }}{% endif %}
+
+          {% if project.collaborators %}
+          <h4>Collaborators</h4>
+          <p class="people">
+            {% for person in project.collaborators %}<span>{{ person }}</span>{% endfor %}
+          </p>
+          {% endif %}
+
+          {% if project.files or project.links %}
+          <h4>Files &amp; links</h4>
+          <p class="pub-links">
+            {% for file in project.files %}<a href="static/{{ file.file }}">{{ file.label }}</a>{% endfor %}
+            {% for link in project.links %}<a href="{{ link.href }}">{{ link.label }}</a>{% endfor %}
+          </p>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

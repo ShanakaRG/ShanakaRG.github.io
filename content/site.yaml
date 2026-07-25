@@ -1,0 +1,157 @@
+# ---------------------------------------------------------------------------
+# Site-wide settings. Everything here appears on more than one page.
+# Edit the values on the right of each colon. Keep the indentation as it is.
+# ---------------------------------------------------------------------------
+
+name: Shanaka Ramesh Gunasekara
+tagline: Computer Vision · UOW          # small text under your name in the header
+credentials: B.Sc.Eng (Hons) · MIEEE (US) · AMIE (SL)
+role: PhD Candidate, Advanced Multimedia Research Lab
+affiliation: University of Wollongong, NSW 2522, Australia
+description: >-
+  Shanaka Ramesh Gunasekara is a PhD candidate at the Advanced Multimedia
+  Research Lab, University of Wollongong, working on 3D human action
+  recognition, computer vision and machine learning.
+
+# How the big name on the home page is broken across lines.
+# The last line is shown in a lighter weight.
+name_lines:
+  - Shanaka
+  - Ramesh
+  - Gunasekara
+
+# Used to bold your name in the publication lists. Just the surname.
+author_surname: Gunasekara
+initials: SG                              # shown if the portrait image is missing
+
+# Files inside static/. Replace these two with your own.
+portrait: profile.jpg                   # lives in static/img/
+cv: files/cv/cv.pdf                     # lives in static/files/cv/
+
+figure_caption: 3D human action recognition
+research_intro: >-
+  Computer vision, artificial intelligence, machine learning, robotics and
+  automation, across a set of interrelated problems.
+
+# ---------------------------------------------------------------------------
+# Contact
+# ---------------------------------------------------------------------------
+
+emails:
+  - srg079@uowmail.edu.au
+  - shanakaramesh2012@gmail.com
+  - shanakag@eng.pdn.ac.lk
+
+phone: "+61 421 452 450"
+
+address: |-
+  Advanced Multimedia Research Lab
+  University of Wollongong
+  NSW 2522, Australia
+
+# ---------------------------------------------------------------------------
+# Profile links. Shown in the header of the home page and in the contact block.
+# Add or remove freely — each needs a label and an href.
+# ---------------------------------------------------------------------------
+
+profiles:
+  - label: Email
+    href: mailto:srg079@uowmail.edu.au
+  - label: Google Scholar
+    href: https://scholar.google.com/citations?user=D0CcJNYAAAAJ
+  - label: ORCID
+    href: https://orcid.org/0000-0002-5827-4878
+  - label: GitHub
+    href: https://github.com/ShanakaRG
+  - label: LinkedIn
+    href: https://www.linkedin.com/in/shanaka-ramesh/
+  - label: ResearchGate
+    href: https://www.researchgate.net/profile/Shanaka-Gunasekara-2
+
+# ---------------------------------------------------------------------------
+# Navigation. Order here is the order in the menu.
+# ---------------------------------------------------------------------------
+
+nav:
+  - label: Home
+    href: index.html
+  - label: Background
+    href: background.html
+  - label: Research
+    href: research.html
+  - label: Publications
+    href: publications.html
+  - label: Awards
+    href: awards.html
+  - label: Contact
+    href: index.html#contact
+
+# ---------------------------------------------------------------------------
+# Research interests — the tag row on the home page.
+# ---------------------------------------------------------------------------
+
+interests:
+  - 3D human action recognition
+  - Transformer networks
+  - Image and video processing
+  - Machine learning (CNN, ANN, SVM)
+  - Medical image analysis
+  - Control algorithms for dynamic systems
+  - Robot manipulators
+  - Mathematical modelling
+  - Signal processing
+
+# ---------------------------------------------------------------------------
+# Extra cards in the "Selected highlights" block on the home page.
+# The paper count and project count are added automatically.
+# ---------------------------------------------------------------------------
+
+highlights:
+  - title: Champions, IEEE R10 Humanitarian Robotics Challenge 2018
+    text: METABOT, a metal-sorting robot built around an active tactile sensing antenna.
+  - title: Funded by IEEE SIGHT and NVIDIA
+    text: >-
+      The elephant–train collision prevention system was supported by IEEE SIGHT
+      (RAS) and the NVIDIA Applied Research Accelerator Program.
+
+# ---------------------------------------------------------------------------
+# News feed on the home page (optional). Newest first. Delete the whole block
+# if you don't want a news section. Links: [text](url), **bold**, *italic*.
+# ---------------------------------------------------------------------------
+
+news:
+  - date: Jul 2025
+    text: Continuing PhD research on 3D human action recognition with transformer networks at the Advanced Multimedia Research Lab, UOW.
+  - date: 2021
+    text: "Presented two papers at **IEEE ICIIS 2021** — the CNN-based elephant–train collision warning system and a computed-torque joint controller for the PUMA 560."
+  - date: 2021
+    text: "Journal article on MRI brain tumour localization and segmentation published in the *Journal of Healthcare Engineering*."
+
+# ---------------------------------------------------------------------------
+# Skills & interests, grouped (optional, al-folio style). If present, this
+# replaces the flat "interests" tag row on the home page. Delete to fall back
+# to the simple "interests:" list above.
+# ---------------------------------------------------------------------------
+
+skillsets:
+  - heading: Computer vision & ML
+    items:
+      - 3D human action recognition
+      - Transformer networks
+      - Image & video processing
+      - CNN / ANN / SVM
+      - Medical image analysis
+      - Deep learning
+  - heading: Robotics & control
+    items:
+      - Control algorithms
+      - Robot manipulators
+      - Mathematical modelling
+      - Signal processing
+  - heading: Tools
+    items:
+      - Python
+      - PyTorch
+      - MATLAB & Simulink
+      - YOLO / Darknet
+      - Jetson / Raspberry Pi

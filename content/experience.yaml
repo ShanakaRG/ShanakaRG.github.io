@@ -1,0 +1,56 @@
+# Research and work experience, newest first.
+#
+# Same fields as education.yaml, plus:
+#   note:   small grey text after the job title, e.g. "full time"
+
+- when: Mar 2021 – present
+  current: true
+  title: PhD Candidate, Researcher
+  note: full time
+  where: >-
+    Advanced Multimedia Research Lab, ICT Research Institute,
+    University of Wollongong, Australia
+  detail: Artificial intelligence and image processing for human action recognition.
+
+- when: Oct 2019 – Apr 2021
+  title: Research Engineer
+  note: part time
+  where: >-
+    Department of Electrical and Electronic Engineering,
+    University of Peradeniya, Sri Lanka
+  detail: |-
+    - Built a mathematical model and individual joint controller with error dynamics for an industrial robot manipulator in MATLAB and Simulink, funded by GPV Lanka (Pvt) Ltd.
+    - Worked on the [Elephant–Train Collision Prevention System](research.html#elephant) with the University of Peradeniya and University of Technology Sydney, funded by IEEE SIGHT.
+
+- when: Jun 2019 – Apr 2021
+  title: Temporary Instructor
+  note: full time
+  where: >-
+    Department of Electrical and Electronic Engineering,
+    University of Peradeniya, Sri Lanka
+
+- when: Mar – Jun 2019
+  title: Associate Electronic Engineer
+  where: "[Zone24x7 (Pvt) Ltd](https://zone24x7.com/), Colombo, Sri Lanka"
+  detail: Worked on the AZIRO Robotics project.
+
+- when: Oct 2017 – Jan 2018
+  title: Engineer Trainee
+  where: "[Industrial Control System](http://www.insys.lk/), Colombo, Sri Lanka"
+  detail: >-
+    Universal Robots UR arm control; a vision-based error tracking and packing
+    system for Phoenix Plastics.
+
+- when: Jan 2017
+  title: Instructor
+  note: part-time teaching assistant
+  where: >-
+    Department of Electrical and Electronic Engineering,
+    University of Peradeniya, Sri Lanka
+
+- when: Oct 2016 – Jan 2017
+  title: Engineer Trainee
+  where: "[Dialog Axiata PLC](https://www.dialog.lk/), Colombo, Sri Lanka"
+  detail: >-
+    Transmission network planning; capacity planning for 2G, 3G and 4G;
+    optical fibre communication and GPON technology testing.

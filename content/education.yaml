@@ -1,0 +1,33 @@
+# Education, newest first.
+#
+# Each entry:
+#   when:     the date shown in the left column
+#   current:  true if this is ongoing (colours the date amber with a dot)
+#   title:    degree or qualification
+#   where:    institution — links written as [text](url) work here
+#   detail:   optional extra paragraph, or a "- " bullet list
+
+- when: 2021 – present
+  current: true
+  title: Doctor of Philosophy (in progress)
+  where: >-
+    Advanced Multimedia Research Lab, Faculty of Engineering and Information
+    Sciences, [University of Wollongong](https://www.uow.edu.au/), Australia
+  detail: Research area — artificial intelligence and image processing for human action recognition.
+
+- when: "2019"
+  title: B.Sc.Eng (Hons), Electrical and Electronic Engineering
+  where: "[University of Peradeniya](http://www.pdn.ac.lk/), Sri Lanka"
+  detail: Awarded February 2019.
+
+- when: "2013"
+  title: G.C.E. Advanced Level — physical science stream
+  where: Govt. Science College, Matale, Sri Lanka
+
+- when: "2009"
+  title: G.C.E. Ordinary Level
+  where: Govt. Science College, Matale, Sri Lanka
+
+- when: "2003"
+  title: Year 5 Scholarship
+  where: Vijaya National School, Matale, Sri Lanka
