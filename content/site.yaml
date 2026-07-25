@@ -72,10 +72,10 @@ profiles:
 nav:
   - label: Home
     href: index.html
-  - label: Education
-    href: education.html
   - label: Experience
     href: experience.html
+  - label: Education
+    href: education.html
   - label: Academic Activities
     href: academic.html
   - label: Projects
