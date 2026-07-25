@@ -39,8 +39,9 @@
     Department of Electrical and Electronic Engineering,
     University of Peradeniya, Sri Lanka
   detail: |-
-    - Built a mathematical model and individual joint controller with error dynamics for an industrial robot manipulator in MATLAB and Simulink, funded by GPV Lanka (Pvt) Ltd.
-    - Worked on the [Elephant–Train Collision Prevention System](research.html#elephant) with the University of Peradeniya and University of Technology Sydney, funded by IEEE SIGHT.
+    - Developed a grant-supported edge-AI system for night-time wild elephant detection on railway tracks using YOLO, customised PyTorch models, Jetson AGX Xavier, ROS, and real-time RGB video streaming from Reolink cameras using C++ and Python.
+    - Designed an end-to-end multitask pipeline for video acquisition, low-light inference, decision-making, alert transmission, and mobile visualisation; also contributed to NVIDIA grant proposal development, with the project receiving additional IEEE RAS SIGHT funding.
+    - Developed MRI brain tumour localisation, classification, and segmentation pipelines using CNNs, Faster R-CNN, and Chan–Vese active-contour refinement, achieving a Dice score of 0.92.
 
 - when: Jun 2019 – Apr 2021
   title: Temporary Instructor
