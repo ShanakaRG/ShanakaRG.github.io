@@ -7,7 +7,7 @@
 #   where:    institution — links written as [text](url) work here
 #   detail:   optional extra paragraph, or a "- " bullet list
 
-- when: "2021 – 2025"
+- when: "2025"
   title: Doctor of Philosophy
   where: >-
     Advanced Multimedia Research Lab, Faculty of Engineering and Information
@@ -22,14 +22,14 @@
   where: "[University of Peradeniya](http://www.pdn.ac.lk/), Sri Lanka"
   detail: Awarded February 2019.
 
-- when: "2013"
-  title: G.C.E. Advanced Level — physical science stream
-  where: Govt. Science College, Matale, Sri Lanka
+# - when: "2013"
+#   title: G.C.E. Advanced Level — physical science stream
+#   where: Govt. Science College, Matale, Sri Lanka
 
-- when: "2009"
-  title: G.C.E. Ordinary Level
-  where: Govt. Science College, Matale, Sri Lanka
+# - when: "2009"
+#   title: G.C.E. Ordinary Level
+#   where: Govt. Science College, Matale, Sri Lanka
 
-- when: "2003"
-  title: Year 5 Scholarship
-  where: Vijaya National School, Matale, Sri Lanka
+# - when: "2003"
+#   title: Year 5 Scholarship
+#   where: Vijaya National School, Matale, Sri Lanka
