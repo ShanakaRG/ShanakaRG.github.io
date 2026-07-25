@@ -42,10 +42,10 @@
 
         <ul class="id-icons">
           {% for link in site.profiles %}
-          <li><a href="{{ link.href }}" aria-label="{{ link.label }}" title="{{ link.label }}">{{ icon(link.label) }}</a></li>
+          <li><a href="{{ link.href }}" data-brand="{{ link.label|lower|replace(' ', '') }}" aria-label="{{ link.label }}" title="{{ link.label }}">{{ icon(link.label) }}</a></li>
           {% endfor %}
           {% if site.cv %}
-          <li><a class="wide" href="static/{{ site.cv }}" title="Curriculum Vitae"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg><span class="txt">CV</span></a></li>
+          <li><a class="wide" data-brand="cv" href="static/{{ site.cv }}" title="Curriculum Vitae"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg><span class="txt">CV</span></a></li>
           {% endif %}
         </ul>
 
@@ -59,7 +59,7 @@
   {% if site.news %}
   <section class="section reveal">
     <div class="wrap">
-      <h2 class="section-title">News</h2>
+      <h2 class="section-title"><span class="ic">📰</span> News</h2>
       <ul class="news">
         {% for entry in site.news %}
         <li>
@@ -75,10 +75,10 @@
   {% if site.skillsets %}
   <section class="section reveal">
     <div class="wrap">
-      <h2 class="section-title">Skills &amp; interests</h2>
+      <h2 class="section-title"><span class="ic">🧩</span> Skills &amp; interests</h2>
       <div class="skillset">
         {% for group in site.skillsets %}
-        <div class="skill-row">
+        <div class="skill-row" data-group="{{ loop.index0 % 5 }}">
           <h3>{{ group.heading }}</h3>
           <ul class="tags">
             {% for tag in group["items"] %}<li>{{ tag }}</li>{% endfor %}
@@ -91,7 +91,7 @@
   {% elif interests %}
   <section class="section reveal">
     <div class="wrap">
-      <h2 class="section-title">Research interests</h2>
+      <h2 class="section-title"><span class="ic">🔬</span> Research interests</h2>
       <ul class="tags">
         {% for item in interests %}<li>{{ item }}</li>{% endfor %}
       </ul>
@@ -101,7 +101,7 @@
 
   <section class="section reveal">
     <div class="wrap">
-      <h2 class="section-title">At a glance</h2>
+      <h2 class="section-title"><span class="ic">✨</span> At a glance</h2>
       <div class="cards">
         <div class="card">
           <span class="stat">{{ publications.total }}</span>
@@ -125,7 +125,7 @@
 
   <section class="section reveal" id="contact">
     <div class="wrap">
-      <h2 class="section-title">Contact</h2>
+      <h2 class="section-title"><span class="ic">📬</span> Contact</h2>
       <div class="contact-grid">
         <div>
           <h3>Email</h3>

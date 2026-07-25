@@ -6,7 +6,7 @@
 
   <section class="page-intro">
     <div class="wrap">
-      <h1>Publications</h1>
+      <h1><span class="ic">📚</span> Publications</h1>
       <p class="lede">{{ publications.total }} peer-reviewed papers and abstracts. A live list is on
         {% for link in site.profiles %}{% if link.label in ['Google Scholar', 'ORCID'] %}<a href="{{ link.href }}">{{ link.label }}</a>{% if not loop.last %} and {% endif %}{% endif %}{% endfor %},
         and the full list is available as <a href="static/files/publications.bib">BibTeX</a>.</p>

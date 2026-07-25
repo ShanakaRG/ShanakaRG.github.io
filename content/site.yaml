@@ -138,7 +138,7 @@ news:
 # ---------------------------------------------------------------------------
 
 skillsets:
-  - heading: Computer vision & ML
+  - heading: "🧠 Computer vision & ML"
     items:
       - 3D human action recognition
       - Transformer networks
@@ -146,13 +146,13 @@ skillsets:
       - CNN / ANN / SVM
       - Medical image analysis
       - Deep learning
-  - heading: Robotics & control
+  - heading: "🤖 Robotics & control"
     items:
       - Control algorithms
       - Robot manipulators
       - Mathematical modelling
       - Signal processing
-  - heading: Tools
+  - heading: "🛠️ Tools"
     items:
       - Python
       - PyTorch

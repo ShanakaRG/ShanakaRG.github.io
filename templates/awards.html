@@ -6,7 +6,7 @@
 
   <section class="page-intro">
     <div class="wrap">
-      <h1>Awards &amp; honours</h1>
+      <h1><span class="ic">🏆</span> Awards &amp; honours</h1>
       <p class="lede">Competition wins, scholarships and merit awards, followed by training schools and workshops.</p>
     </div>
   </section>
@@ -14,7 +14,7 @@
   {% if awards %}
   <section class="section reveal">
     <div class="wrap">
-      <h2 class="section-title">Awards &amp; scholarships</h2>
+      <h2 class="section-title"><span class="ic">🏆</span> Awards &amp; scholarships</h2>
       <ul class="awards">
         {% for item in awards %}<li>{{ item|inline|safe }}</li>{% endfor %}
       </ul>
@@ -25,7 +25,7 @@
   {% if training %}
   <section class="section reveal">
     <div class="wrap">
-      <h2 class="section-title">Training &amp; workshops</h2>
+      <h2 class="section-title"><span class="ic">📖</span> Training &amp; workshops</h2>
       <ul class="awards">
         {% for item in training %}<li>{{ item|inline|safe }}</li>{% endfor %}
       </ul>

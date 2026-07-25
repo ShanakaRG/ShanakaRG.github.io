@@ -21,7 +21,7 @@
 
   <section class="page-intro">
     <div class="wrap">
-      <h1>Background</h1>
+      <h1><span class="ic">🎓</span> Background</h1>
       <p class="lede">Where I have studied and worked, and what I have contributed outside my own research.</p>
       {% if site.cv %}<p style="margin-top:1rem"><a href="static/{{ site.cv }}" class="mono">Download full CV (PDF) →</a></p>{% endif %}
     </div>
@@ -30,7 +30,7 @@
   {% if education %}
   <section class="section reveal">
     <div class="wrap">
-      <h2 class="section-title">Education</h2>
+      <h2 class="section-title"><span class="ic">🎓</span> Education</h2>
       {{ timeline(education) }}
     </div>
   </section>
@@ -39,7 +39,7 @@
   {% if experience %}
   <section class="section reveal">
     <div class="wrap">
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title"><span class="ic">💼</span> Experience</h2>
       {{ timeline(experience) }}
     </div>
   </section>
@@ -48,7 +48,7 @@
   {% if presentations %}
   <section class="section reveal">
     <div class="wrap">
-      <h2 class="section-title">Presentations &amp; workshops</h2>
+      <h2 class="section-title"><span class="ic">🎤</span> Presentations &amp; workshops</h2>
       <ul class="awards">
         {% for item in presentations %}<li>{{ item|inline|safe }}</li>{% endfor %}
       </ul>
@@ -59,7 +59,7 @@
   {% if service %}
   <section class="section reveal">
     <div class="wrap">
-      <h2 class="section-title">Service</h2>
+      <h2 class="section-title"><span class="ic">🤝</span> Service</h2>
       <ul class="awards">
         {% for item in service %}<li>{{ item|inline|safe }}</li>{% endfor %}
       </ul>
