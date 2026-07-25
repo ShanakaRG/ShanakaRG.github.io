@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Academic Activities — {{ site.name }}{% endblock %}
+{% block description %}Presentations, workshops and academic service of {{ site.name }}.{% endblock %}
+
+{% block content %}
+
+  <section class="page-intro">
+    <div class="wrap">
+      <h1><span class="ic">🎤</span> Academic Activities</h1>
+      <p class="lede">Presentations, workshops I have attended or delivered, and my service to the academic community.</p>
+    </div>
+  </section>
+
+  {% if presentations %}
+  <section class="section reveal">
+    <div class="wrap">
+      <h2 class="section-title"><span class="ic">🎤</span> Presentations &amp; workshops</h2>
+      <ul class="awards">
+        {% for item in presentations %}<li>{{ item|inline|safe }}</li>{% endfor %}
+      </ul>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if service %}
+  <section class="section reveal">
+    <div class="wrap">
+      <h2 class="section-title"><span class="ic">🤝</span> Service</h2>
+      <ul class="awards">
+        {% for item in service %}<li>{{ item|inline|safe }}</li>{% endfor %}
+      </ul>
+    </div>
+  </section>
+  {% endif %}
+
+{% endblock %}

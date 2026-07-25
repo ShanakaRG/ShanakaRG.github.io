@@ -144,7 +144,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 /* --- 5. Hero (home) ------------------------------------------------------ */
 
 .hero { padding: 3rem 0 2rem; }
-.hero-grid { display: grid; grid-template-columns: 260px 1fr; gap: 3rem; align-items: start; }
+.hero-grid { display: grid; grid-template-columns: 1fr 260px; gap: 3rem; align-items: start; }
 
 @media (max-width: 620px) {
   .hero-grid { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }

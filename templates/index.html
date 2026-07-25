@@ -19,21 +19,6 @@
 
   <section class="hero">
     <div class="wrap hero-grid">
-      <aside class="hero-aside">
-        <img class="portrait" src="static/img/{{ site.portrait }}" data-initials="{{ site.initials|default('SG') }}" alt="Portrait of {{ site.name }}" width="220" height="220">
-        <figure class="pose-fig">
-          <svg id="pose-figure" viewBox="0 0 400 480" role="img"
-               aria-label="An animated stick-figure skeleton built from joint keypoints, cycling through a sequence of human poses.">
-            <defs>
-              <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
-                <circle cx="1" cy="1" r="1" fill="var(--line)"/>
-              </pattern>
-            </defs>
-            <rect width="400" height="480" fill="url(#dots)"/>
-          </svg>
-          <figcaption id="pose-frame-index">Hello, Welcome to my profile</figcaption>
-        </figure>
-      </aside>
       <div>
         <h1 class="hero-name">{{ site.name }}</h1>
         <p class="hero-role">{{ site.role }}</p>
@@ -53,6 +38,21 @@
           {{ about_html|safe }}
         </div>
       </div>
+      <aside class="hero-aside">
+        <img class="portrait" src="static/img/{{ site.portrait }}" data-initials="{{ site.initials|default('SG') }}" alt="Portrait of {{ site.name }}" width="220" height="220">
+        <figure class="pose-fig">
+          <svg id="pose-figure" viewBox="0 0 400 480" role="img"
+               aria-label="An animated stick-figure skeleton built from joint keypoints, cycling through a sequence of human poses.">
+            <defs>
+              <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1" cy="1" r="1" fill="var(--line)"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="480" fill="url(#dots)"/>
+          </svg>
+          <figcaption id="pose-frame-index">Hello, Welcome to my profile</figcaption>
+        </figure>
+      </aside>
     </div>
   </section>
 

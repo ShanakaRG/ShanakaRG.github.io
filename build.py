@@ -360,6 +360,9 @@ def build() -> None:
     pages = [
         ("index.html", "index.html"),
         ("background.html", "background.html"),
+        ("education.html", "education.html"),
+        ("experience.html", "experience.html"),
+        ("academic.html", "academic.html"),
         ("research.html", "research.html"),
         ("publications.html", "publications.html"),
         ("awards.html", "awards.html"),

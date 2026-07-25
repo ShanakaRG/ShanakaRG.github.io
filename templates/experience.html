@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Experience — {{ site.name }}{% endblock %}
+{% block description %}Research and work experience of {{ site.name }}.{% endblock %}
+
+{% macro timeline(items) %}
+<ol class="timeline">
+  {% for item in items %}
+  <li>
+    <div class="when{% if item.current %} now{% endif %}">{{ item.when }}</div>
+    <div>
+      <h3>{{ item.title }}{% if item.note %} <span class="mono" style="color:var(--text-faint)">· {{ item.note }}</span>{% endif %}</h3>
+      {% if item.where %}<p class="where">{{ item.where|inline|safe }}</p>{% endif %}
+      {% if item.detail %}{{ item.detail|md|safe }}{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% endmacro %}
+
+{% block content %}
+
+  <section class="page-intro">
+    <div class="wrap">
+      <h1><span class="ic">💼</span> Experience</h1>
+      <p class="lede">My research and professional experience.</p>
+      {% if site.cv %}<p style="margin-top:1rem"><a href="static/{{ site.cv }}" class="mono">Download full CV (PDF) →</a></p>{% endif %}
+    </div>
+  </section>
+
+  {% if experience %}
+  <section class="section reveal">
+    <div class="wrap">
+      {{ timeline(experience) }}
+    </div>
+  </section>
+  {% endif %}
+
+{% endblock %}
