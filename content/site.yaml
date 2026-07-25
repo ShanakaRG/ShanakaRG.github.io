@@ -4,14 +4,13 @@
 # ---------------------------------------------------------------------------
 
 name: Shanaka Ramesh Gunasekara
-tagline: Computer Vision · UOW          # small text under your name in the header
+tagline: Computer Vision · Engineering         # small text under your name in the header
 credentials: B.Sc.Eng (Hons) · MIEEE (US) · AMIE (SL)
-role: PhD Candidate, Advanced Multimedia Research Lab
-affiliation: University of Wollongong, NSW 2522, Australia
+role: Postdoctoral Researcher
+affiliation: RMIT University, Melbourne, 3000 Australia
 description: >-
-  Shanaka Ramesh Gunasekara is a PhD candidate at the Advanced Multimedia
-  Research Lab, University of Wollongong, working on 3D human action
-  recognition, computer vision and machine learning.
+  Shanaka Ramesh Gunasekara is a Postdoctoral Researcher at RMIT University,
+  working oncomputer vision and machine learning for industrial applications.
 
 # How the big name on the home page is broken across lines.
 # The last line is shown in a lighter weight.
@@ -38,16 +37,14 @@ research_intro: >-
 # ---------------------------------------------------------------------------
 
 emails:
-  - srg079@uowmail.edu.au
+  - shanaka.ramesh.gunasekara@rmit.edu.au
   - shanakaramesh2012@gmail.com
   - shanakag@eng.pdn.ac.lk
 
 phone: "+61 421 452 450"
 
 address: |-
-  Advanced Multimedia Research Lab
-  University of Wollongong
-  NSW 2522, Australia
+  Building 57, Mechanical and Manufacturing Engineering, School of Engineering, RMIT, Melbourne, 3000 Australia
 
 # ---------------------------------------------------------------------------
 # Profile links. Shown in the header of the home page and in the contact block.
@@ -56,7 +53,7 @@ address: |-
 
 profiles:
   - label: Email
-    href: mailto:srg079@uowmail.edu.au
+    href: mailto:shanaka.ramesh.gunasekara@rmit.edu.au
   - label: Google Scholar
     href: https://scholar.google.com/citations?user=D0CcJNYAAAAJ
   - label: ORCID
@@ -99,13 +96,12 @@ nav:
 # ---------------------------------------------------------------------------
 
 interests:
-  - 3D human action recognition
-  - Transformer networks
-  - Image and video processing
-  - Machine learning (CNN, ANN, SVM)
-  - Medical image analysis
-  - Control algorithms for dynamic systems
-  - Robot manipulators
+  - Spatial temporal representation learning
+  - Human Motion analysis
+  - Computer vision
+  - Medical image and video analysis 
+  - Deep learning (ANN, CNN, RNN, GCN, Transformer, Diffusion models, Generative models)
+  - Edge AI and embedded systems
   - Mathematical modelling
   - Signal processing
 
@@ -116,7 +112,7 @@ interests:
 
 highlights:
   - title: Champions, IEEE R10 Humanitarian Robotics Challenge 2018
-    text: METABOT, a metal-sorting robot built around an active tactile sensing antenna.
+    # text: METABOT, a metal-sorting robot built around an active tactile sensing antenna.
   - title: Funded by IEEE SIGHT and NVIDIA
     text: >-
       The elephant–train collision prevention system was supported by IEEE SIGHT
@@ -128,12 +124,12 @@ highlights:
 # ---------------------------------------------------------------------------
 
 news:
-  - date: Jul 2025
-    text: Continuing PhD research on 3D human action recognition with transformer networks at the Advanced Multimedia Research Lab, UOW.
-  - date: 2021
-    text: "Presented two papers at **IEEE ICIIS 2021** — the CNN-based elephant–train collision warning system and a computed-torque joint controller for the PUMA 560."
-  - date: 2021
-    text: "Journal article on MRI brain tumour localization and segmentation published in the *Journal of Healthcare Engineering*."
+  - date: Sep 2025
+    text: "Started a postdoctoral research position at the Royal Melbourne Institute of Technology (RMIT), Melbourne, Australia."
+  - date: Apr 2026
+    text: Graduated with a PhD in Computer Science.
+  - date: Dec 2023
+    text: "Presented a papers at **DICTA 2023** "
 
 # ---------------------------------------------------------------------------
 # Skills & interests, grouped (optional, al-folio style). If present, this
@@ -144,22 +140,25 @@ news:
 skillsets:
   - heading: "🧠 Computer vision & ML"
     items:
-      - 3D human action recognition
-      - Transformer networks
+      - Spatial temporal representation learning
+      - Human motion analysis
+      - Graph convolutional networks
+      - Self-supervised learning
+      - Diffusion models
+      - Generative models
+      - Multi-modal learning
       - Image & video processing
-      - CNN / ANN / SVM
-      - Medical image analysis
       - Deep learning
   - heading: "🤖 Robotics & control"
     items:
-      - Control algorithms
-      - Robot manipulators
+      - Edge AI and embedded systems for robot manipulations
       - Mathematical modelling
       - Signal processing
   - heading: "🛠️ Tools"
     items:
-      - Python
       - PyTorch
+      - Python 
+      - C++
       - MATLAB & Simulink
       - YOLO / Darknet
       - Jetson / Raspberry Pi
