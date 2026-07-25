@@ -7,13 +7,13 @@
 #   where:    institution — links written as [text](url) work here
 #   detail:   optional extra paragraph, or a "- " bullet list
 
-- when: 2021 – present
+- when: 2021 – 2025
   current: true
-  title: Doctor of Philosophy (in progress)
+  title: Doctor of Philosophy
   where: >-
     Advanced Multimedia Research Lab, Faculty of Engineering and Information
     Sciences, [University of Wollongong](https://www.uow.edu.au/), Australia
-  detail: Research area — artificial intelligence and image processing for human action recognition.
+  detail: Research interest- Computer Vision, Motion analysis, Action recognition, Generative models. Thesis Title- Improving Skeleton-based Action Recognition.  Supervised by [Prof. Wanqing Li](https://scholars.uow.edu.au/wanqing-li).
 
 - when: "2019"
   title: B.Sc.Eng (Hons), Electrical and Electronic Engineering
