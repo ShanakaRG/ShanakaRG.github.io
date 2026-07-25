@@ -180,6 +180,9 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 .hero-cred { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .04em; color: var(--text-faint); text-transform: uppercase; margin: 0 0 1.1rem; }
 
 .hero-bio { color: var(--text-soft); max-width: 62ch; }
+@media (min-width: 620px) {
+  .hero-bio { text-align: justify; }
+}
 .hero-bio p { margin-bottom: .85rem; }
 .page-intro .lede { max-width: 68ch; }
 .section > .wrap > p.lede, .news, .skillset { max-width: 900px; }
