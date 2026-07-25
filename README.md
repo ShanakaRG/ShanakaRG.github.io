@@ -85,6 +85,19 @@ Paste the BibTeX from IEEE Xplore or Google Scholar into
 }
 ```
 
+**Publication thumbnails.** The publications page shows each paper as a card
+with a small image on the left, grouped by year. To give a paper a thumbnail,
+drop a figure into `static/img/pubs/` and add one line to its BibTeX entry:
+
+```bibtex
+  image = {img/pubs/gunasekara2021systematic.png},
+```
+
+If a paper has no `image`, a small venue tag (like `ICIIS`) is shown in its
+place, so thumbnails are always optional. Three demo placeholders are wired in
+right now and marked `% DEMO` in `publications.bib` — replace them with real
+paper figures when you have them.
+
 `@article` goes under Journal articles; anything else goes under Conference
 articles. Your name is bolded automatically — that is what `author_surname` in
 `site.yaml` controls. The counts on the home page update themselves.
@@ -128,6 +141,21 @@ means `static/img/projects/newproject/result.png`.
 Copy an entry in `content/experience.yaml` or `content/education.yaml`. Setting
 `current: true` colours the date amber and adds a dot — use it for whatever you
 are doing now, and remove it when that changes.
+
+### Add a travel entry
+
+Edit `content/travel.yaml`. Each entry is a card with photos and a short
+write-up. Put photos in `static/img/travel/` and reference them by filename.
+While the file has no entries, the page shows a friendly "coming soon" message
+automatically.
+
+### Add a blog post
+
+Edit `content/blog.yaml`. Posts appear as **tiles** (newest first), not a list.
+Each needs a `title`; optionally a `date`, an `excerpt`, a `url` to link to
+(an external post, or a file under `static/`), an `image` (in `static/img/blog/`),
+and `tags`. Without an image, a coloured tile with the first letter is shown.
+While the file is empty, the page shows "coming soon".
 
 ### Change your bio, email, or links
 

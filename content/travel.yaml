@@ -1,0 +1,25 @@
+# ---------------------------------------------------------------------------
+# Travel entries. Each becomes a card with photos and a short write-up.
+# Leave this list empty (just the comments) to show the "coming soon" page.
+#
+# Fields per entry:
+#   place:    heading, e.g. "Sigiriya, Sri Lanka"
+#   location: optional smaller line, e.g. "Central Province"
+#   date:     optional, e.g. "March 2024"
+#   body:     optional paragraph(s); supports [links](url), **bold**, *italic*
+#   images:   list of { file, alt } — file is relative to static/
+#             put the photos in static/img/travel/
+#
+# Example (uncomment and edit when you're ready):
+#
+# - place: Sigiriya, Sri Lanka
+#   location: Central Province
+#   date: March 2024
+#   body: >-
+#     The climb up the rock fortress at dawn, before the crowds. **Worth every
+#     one of the 1,200 steps.**
+#   images:
+#     - file: img/travel/sigiriya-1.jpg
+#       alt: View from the summit of Sigiriya rock
+#     - file: img/travel/sigiriya-2.jpg
+#       alt: The lion's paw staircase

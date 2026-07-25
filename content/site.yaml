@@ -77,12 +77,16 @@ nav:
     href: index.html
   - label: Background
     href: background.html
-  - label: Research
+  - label: Research projects
     href: research.html
   - label: Publications
     href: publications.html
   - label: Awards
     href: awards.html
+  - label: Travel
+    href: travel.html
+  - label: Blog
+    href: blog.html
   - label: Contact
     href: index.html#contact
 

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Blog — {{ site.name }}{% endblock %}
+{% block description %}Articles and notes written by {{ site.name }}.{% endblock %}
+
+{% block content %}
+
+  <section class="page-intro">
+    <div class="wrap">
+      <h1>Blog</h1>
+      <p class="lede">Notes and articles on research, engineering, and things I'm learning.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      {% if blog %}
+      <div class="blog-tiles">
+        {% for post in blog %}
+        <article class="blog-tile reveal">
+          <a href="{{ post.url|default('#') }}" class="blog-tile-link">
+            {% if post.image %}
+            <div class="blog-tile-img"><img src="static/{{ post.image }}" alt="{{ post.title }}" loading="lazy"></div>
+            {% else %}
+            <div class="blog-tile-img blog-tile-img--blank"><span>{{ post.title[:1]|upper }}</span></div>
+            {% endif %}
+            <div class="blog-tile-body">
+              {% if post.date %}<p class="blog-date">{{ post.date }}</p>{% endif %}
+              <h3>{{ post.title }}</h3>
+              {% if post.excerpt_html %}<div class="blog-excerpt">{{ post.excerpt_html|safe }}</div>{% endif %}
+              {% if post.tags %}
+              <ul class="blog-tags">{% for tag in post.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+              {% endif %}
+            </div>
+          </a>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="empty-state">
+        <div class="empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+        </div>
+        <h3>Coming soon</h3>
+        <p>I'm working on my first articles. Check back soon.</p>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+{% endblock %}

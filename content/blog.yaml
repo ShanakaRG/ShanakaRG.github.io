@@ -1,0 +1,27 @@
+# ---------------------------------------------------------------------------
+# Blog posts, shown as tiles (newest first). Leave empty to show the
+# "coming soon" page.
+#
+# Fields per post:
+#   title:   the post title
+#   date:    e.g. "August 2025"
+#   url:     where the tile links to — an external link (Medium, arXiv blog,
+#            etc.) or a file you add under static/. If omitted, the tile
+#            doesn't link anywhere yet.
+#   excerpt: a sentence or two of preview; supports [links](url), **bold**
+#   image:   optional thumbnail, relative to static/ (put it in static/img/blog/)
+#            if omitted, a coloured tile with the first letter is shown instead
+#   tags:    optional list of short labels
+#
+# Example (uncomment and edit when you're ready):
+#
+# - title: Why transformers work well for skeleton action recognition
+#   date: August 2025
+#   url: https://medium.com/@you/your-post
+#   excerpt: >-
+#     A short, intuitive explanation of self-attention over joint sequences,
+#     and why it beats older RNN approaches on **NTU RGB+D**.
+#   image: img/blog/transformers-skeleton.jpg
+#   tags:
+#     - Deep learning
+#     - Action recognition

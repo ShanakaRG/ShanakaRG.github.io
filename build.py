@@ -247,12 +247,23 @@ def build_publications(cfg: dict) -> dict:
                                     else "Conference"),
             "links": publication_links(e),
             "entrytype": e["entrytype"],
+            # optional per-paper thumbnail, e.g. image = {img/pubs/foo.png}
+            "image": ("static/" + e["image"]) if e.get("image") else "",
         })
     prepared.sort(key=lambda p: (p["year"], p["title"]), reverse=True)
     journals = [p for p in prepared if p["entrytype"] in JOURNAL_TYPES]
     conferences = [p for p in prepared if p["entrytype"] not in JOURNAL_TYPES]
+
+    # grouped by year, newest first — for the visual layout
+    by_year = []
+    seen = {}
+    for p in prepared:
+        seen.setdefault(p["year"], []).append(p)
+    for year in sorted(seen, reverse=True):
+        by_year.append({"year": year, "items": seen[year]})
+
     return {"journals": journals, "conferences": conferences,
-            "total": len(prepared)}
+            "by_year": by_year, "total": len(prepared)}
 
 
 # --------------------------------------------------------------------------
@@ -289,6 +300,19 @@ def collect() -> dict:
     publications = build_publications(site)
     awards = load_yaml("awards") or {}
 
+    # Travel entries: each may have a markdown 'body'
+    travel = load_yaml("travel") or []
+    for t in travel:
+        if t.get("body"):
+            t["body_html"] = md(t["body"])
+        t["images"] = t.get("images") or []
+
+    # Blog posts: each may have a markdown 'excerpt'
+    blog = load_yaml("blog") or []
+    for post in blog:
+        if post.get("excerpt"):
+            post["excerpt_html"] = md(post["excerpt"])
+
     return {
         "site": site,
         "about_html": md(about),
@@ -298,6 +322,8 @@ def collect() -> dict:
         "service": load_yaml("service") or [],
         "projects": projects,
         "publications": publications,
+        "travel": travel,
+        "blog": blog,
         "awards": awards.get("awards", []),
         "training": awards.get("training", []),
         "interests": site.get("interests", []),
@@ -337,6 +363,8 @@ def build() -> None:
         ("research.html", "research.html"),
         ("publications.html", "publications.html"),
         ("awards.html", "awards.html"),
+        ("travel.html", "travel.html"),
+        ("blog.html", "blog.html"),
     ]
 
     for template_name, out_name in pages:

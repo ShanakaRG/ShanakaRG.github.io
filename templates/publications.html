@@ -2,26 +2,6 @@
 {% block title %}Publications — {{ site.name }}{% endblock %}
 {% block description %}Journal articles and conference papers by {{ site.name }}.{% endblock %}
 
-{% macro pub_list(items) %}
-<ol class="pubs">
-  {% for pub in items %}
-  <li class="pub">
-    <div class="pub-meta"><span class="year">{{ pub.year }}</span><span class="kind">{{ pub.tag }}</span></div>
-    <div>
-      <h3>{{ pub.title|safe }}</h3>
-      <p class="authors">{{ pub.authors|safe }}</p>
-      <p class="venue">{{ pub.venue|safe }}</p>
-      {% if pub.links %}
-      <p class="pub-links">
-        {% for link in pub.links %}<a href="{{ link.href }}">{{ link.label }}</a>{% endfor %}
-      </p>
-      {% endif %}
-    </div>
-  </li>
-  {% endfor %}
-</ol>
-{% endmacro %}
-
 {% block content %}
 
   <section class="page-intro">
@@ -33,22 +13,34 @@
     </div>
   </section>
 
-  {% if publications.journals %}
-  <section class="section reveal">
+  <section class="section">
     <div class="wrap">
-      <h2 class="section-title">Journal articles</h2>
-      {{ pub_list(publications.journals) }}
+      {% for group in publications.by_year %}
+      <div class="pub-year reveal">
+        <h2 class="year-head">{{ group.year }}</h2>
+        <ul class="pub-cards">
+          {% for pub in group["items"] %}
+          <li class="pub-card">
+            <div class="pub-thumb">
+              {% if pub.image %}
+              <img src="{{ pub.image }}" alt="Figure for {{ pub.title }}" loading="lazy">
+              {% else %}
+              <span class="pub-thumb-tag">{{ pub.tag }}</span>
+              {% endif %}
+            </div>
+            <div class="pub-body">
+              <h3>{{ pub.title|safe }}
+                {% for link in pub.links %}<a class="pub-tag-link" href="{{ link.href }}">[{{ link.label }}]</a>{% endfor %}
+              </h3>
+              <p class="authors">{{ pub.authors|safe }}</p>
+              <p class="venue">{{ pub.venue|safe }}</p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
     </div>
   </section>
-  {% endif %}
-
-  {% if publications.conferences %}
-  <section class="section reveal">
-    <div class="wrap">
-      <h2 class="section-title">Conference articles &amp; abstracts</h2>
-      {{ pub_list(publications.conferences) }}
-    </div>
-  </section>
-  {% endif %}
 
 {% endblock %}

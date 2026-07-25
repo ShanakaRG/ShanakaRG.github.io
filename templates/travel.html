@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Travel — {{ site.name }}{% endblock %}
+{% block description %}Travel photographs and notes by {{ site.name }}.{% endblock %}
+
+{% block content %}
+
+  <section class="page-intro">
+    <div class="wrap">
+      <h1>Travel</h1>
+      <p class="lede">Places I've been, and a few photographs from the road.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      {% if travel %}
+      <div class="travel-grid">
+        {% for entry in travel %}
+        <article class="travel-card reveal">
+          {% if entry.images %}
+          <div class="travel-photos">
+            {% for img in entry.images %}
+            <img src="static/{{ img.file }}" alt="{{ img.alt|default(entry.place) }}" loading="lazy">
+            {% endfor %}
+          </div>
+          {% endif %}
+          <div class="travel-body">
+            <h3>{{ entry.place }}</h3>
+            {% if entry.date or entry.location %}
+            <p class="travel-meta">{{ entry.location }}{% if entry.date %}{% if entry.location %} · {% endif %}{{ entry.date }}{% endif %}</p>
+            {% endif %}
+            {% if entry.body_html %}{{ entry.body_html|safe }}{% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="empty-state">
+        <div class="empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Coming soon</h3>
+        <p>I'm putting together photographs and notes from my travels. Check back soon.</p>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+{% endblock %}

@@ -159,6 +159,18 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
   color: var(--text-faint); font-family: var(--font-slab); font-size: 3rem; font-weight: 700;
 }
 
+/* skeleton animation below the portrait */
+.pose-fig { margin: 1.1rem 0 0; }
+.pose-fig svg {
+  width: 100%; display: block;
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--card);
+}
+.pose-fig figcaption {
+  font-family: var(--font-mono); font-size: .66rem; letter-spacing: .02em;
+  color: var(--text-faint); text-align: center; margin-top: .5rem;
+}
+.pose-fig figcaption b { color: var(--accent); font-weight: 500; }
+
 .hero-name { font-family: var(--font-slab); font-size: 2.15rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 .35rem; }
 .hero-role { font-size: 1.05rem; color: var(--text); margin: 0 0 .15rem; }
 .hero-affil { color: var(--text-soft); margin: 0 0 .35rem; }
@@ -228,29 +240,47 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 .timeline ul li { margin-bottom: .3rem; }
 @media (max-width: 600px) { .timeline > li { grid-template-columns: 1fr; gap: .3rem; } }
 
-/* --- 10. Publications ---------------------------------------------------- */
+/* --- 10. Publications (year-grouped visual cards) ----------------------- */
 
-.pubs { list-style: none; margin: 0; padding: 0; }
-.pubs > li { display: grid; grid-template-columns: 96px 1fr; gap: 1.1rem; padding: 1.1rem 0; border-top: 1px solid var(--line); }
-.pubs > li:first-child { border-top: 0; padding-top: 0; }
-.pub-meta { font-family: var(--font-mono); font-size: .74rem; color: var(--text-faint); }
-.pub-meta .year { display: block; color: var(--text); font-size: .9rem; }
-.pub-meta .kind { display: block; margin-top: .15rem; }
-.pub h3 { font-size: 1.02rem; font-weight: 620; line-height: 1.35; margin-bottom: .3rem; }
-.pub .authors { font-size: .92rem; color: var(--text-soft); margin: 0 0 .2rem; }
-.pub .authors .me { color: var(--text); font-weight: 650; }
-.pub .venue { font-size: .88rem; color: var(--text-faint); font-style: italic; margin: 0 0 .5rem; }
-.pub-links { display: flex; flex-wrap: wrap; gap: .4rem; }
-.pub-links a {
-  font-family: var(--font-mono); font-size: .7rem; letter-spacing: .02em;
-  color: var(--text-soft); border: 1px solid var(--line); padding: .25rem .5rem;
-  border-radius: 6px; background: var(--card);
+.pub-year { margin-bottom: 1.5rem; }
+.year-head {
+  font-family: var(--font-slab); font-size: 1.5rem; font-weight: 700;
+  color: var(--text); margin: 0 0 1rem;
+  padding-bottom: .4rem; border-bottom: 2px solid var(--accent);
+  display: inline-block; min-width: 4ch;
 }
-.pub-links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-@media (max-width: 560px) {
-  .pubs > li { grid-template-columns: 1fr; gap: .4rem; }
-  .pub-meta { display: flex; gap: .5rem; }
-  .pub-meta .year, .pub-meta .kind { display: inline; margin: 0; }
+
+.pub-cards { list-style: none; margin: 0 0 .5rem; padding: 0; display: grid; gap: 1rem; }
+
+.pub-card {
+  display: grid; grid-template-columns: 150px 1fr; gap: 1.2rem; align-items: start;
+  border: 1px solid var(--line); background: var(--card); border-radius: var(--radius);
+  padding: 1rem 1.15rem; box-shadow: var(--shadow);
+}
+
+.pub-thumb {
+  width: 150px; aspect-ratio: 4/3; border-radius: 8px; overflow: hidden;
+  background: var(--bg-soft); border: 1px solid var(--line);
+  display: grid; place-items: center;
+}
+.pub-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.pub-thumb-tag {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .04em;
+  color: var(--accent); text-align: center; padding: .4rem; line-height: 1.3;
+}
+
+.pub-body h3 { font-size: 1.02rem; font-weight: 620; line-height: 1.4; margin: 0 0 .35rem; }
+.pub-tag-link {
+  font-family: var(--font-mono); font-size: .74rem; font-weight: 500;
+  white-space: nowrap; margin-left: .35rem;
+}
+.pub-body .authors { font-size: .9rem; color: var(--text-soft); margin: 0 0 .25rem; }
+.pub-body .authors .me { color: var(--text); font-weight: 650; }
+.pub-body .venue { font-size: .86rem; color: var(--text-faint); font-style: italic; margin: 0; }
+
+@media (max-width: 620px) {
+  .pub-card { grid-template-columns: 1fr; gap: .8rem; }
+  .pub-thumb { width: 100%; max-width: 220px; aspect-ratio: 16/9; }
 }
 
 /* --- 11. Research projects ---------------------------------------------- */
@@ -297,7 +327,6 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 .contact-grid li { margin-bottom: .25rem; }
 
 /* --- 14. Page intro (inner pages) --------------------------------------- */
-
 .page-intro { padding: 2.5rem 0 1rem; }
 .page-intro h1 { font-family: var(--font-slab); font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; }
 
@@ -319,3 +348,41 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
   .js .reveal, .js .reveal.is-visible { opacity: 1; transform: none; transition: none; }
   * { transition-duration: .01ms !important; }
 }
+
+/* --- 17. Travel ---------------------------------------------------------- */
+
+.travel-grid { display: grid; gap: 1.5rem; }
+.travel-card { border: 1px solid var(--line); background: var(--card); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.travel-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2px; background: var(--line); }
+.travel-photos img { width: 100%; height: 220px; object-fit: cover; display: block; }
+.travel-body { padding: 1.1rem 1.25rem; }
+.travel-body h3 { font-size: 1.15rem; margin-bottom: .2rem; }
+.travel-meta { font-family: var(--font-mono); font-size: .74rem; color: var(--text-faint); margin: 0 0 .6rem; }
+.travel-body p { font-size: .95rem; color: var(--text-soft); }
+
+/* --- 18. Blog (tiles) ---------------------------------------------------- */
+
+.blog-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+.blog-tile { border: 1px solid var(--line); background: var(--card); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .12s ease, box-shadow .12s ease; }
+.blog-tile:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(16,24,40,.1); }
+.blog-tile-link { display: block; color: inherit; text-decoration: none; height: 100%; }
+.blog-tile-link:hover { text-decoration: none; }
+.blog-tile-img { aspect-ratio: 16/9; background: var(--bg-soft); overflow: hidden; }
+.blog-tile-img img { width: 100%; height: 100%; object-fit: cover; }
+.blog-tile-img--blank { display: grid; place-items: center; background: linear-gradient(135deg, var(--accent-soft), var(--bg-soft)); }
+.blog-tile-img--blank span { font-family: var(--font-slab); font-size: 2.5rem; font-weight: 700; color: var(--accent); }
+.blog-tile-body { padding: 1rem 1.15rem 1.2rem; }
+.blog-date { font-family: var(--font-mono); font-size: .72rem; color: var(--text-faint); margin: 0 0 .35rem; }
+.blog-tile-body h3 { font-size: 1.08rem; line-height: 1.3; margin-bottom: .45rem; }
+.blog-excerpt { font-size: .92rem; color: var(--text-soft); }
+.blog-excerpt p { margin: 0; }
+.blog-tags { display: flex; flex-wrap: wrap; gap: .35rem; list-style: none; margin: .75rem 0 0; padding: 0; }
+.blog-tags li { font-family: var(--font-mono); font-size: .68rem; color: var(--tag-text); background: var(--tag-bg); padding: .2rem .5rem; border-radius: 5px; }
+
+/* --- 19. Empty "coming soon" state -------------------------------------- */
+
+.empty-state { text-align: center; padding: 3.5rem 1rem; max-width: 420px; margin: 0 auto; }
+.empty-icon { width: 56px; height: 56px; margin: 0 auto 1.1rem; color: var(--accent); display: grid; place-items: center; border: 1px solid var(--line); border-radius: 14px; background: var(--card); }
+.empty-icon svg { width: 28px; height: 28px; }
+.empty-state h3 { font-family: var(--font-slab); font-size: 1.4rem; margin-bottom: .5rem; }
+.empty-state p { color: var(--text-soft); font-size: .96rem; }
