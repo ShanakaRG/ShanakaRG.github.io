@@ -13,7 +13,10 @@
   where: >-
     Advanced Multimedia Research Lab, Faculty of Engineering and Information
     Sciences, [University of Wollongong](https://www.uow.edu.au/), Australia
-  detail: Research interest- Computer Vision, Motion analysis, Action recognition, Generative models. Thesis Title- Improving Skeleton-based Action Recognition.  Supervised by [Prof. Wanqing Li](https://scholars.uow.edu.au/wanqing-li).
+  detail: |-
+  - Research interest- Computer Vision, Motion analysis, Action recognition, Generative models. 
+  - Thesis Title- Improving Skeleton-based Action Recognition.  
+  - Supervised by [Prof. Wanqing Li](https://scholars.uow.edu.au/wanqing-li).
 
 - when: "2019"
   title: B.Sc.Eng (Hons), Electrical and Electronic Engineering
