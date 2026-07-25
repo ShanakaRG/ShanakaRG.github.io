@@ -9,7 +9,9 @@
   note: full time
   where: >-
     Royal Melbourne Institute of Technology (RMIT), Melbourne, Australia.
-  detail: Working on computer vision and Deep learning for industrial automation, agentic frameworks, and medical workflow analysis.
+  detail: |-
+    - Developed and deployed an AI-driven digital twin integrated with agentic AI frameworks to support manufacturing production monitoring, anomaly detection, operational decision-making, and business process optimisation at [Kilcoy Global Foods](https://www.kilcoyglobalfoods.com/), Australia.
+    - Working on a medical video analysis project to analysis surgical videos and provide real-time feedback to surgeons using computer vision and deep learning techniques.
 
 - when: Apr 2025 – Aug 2025
   title: Research Fellow
@@ -17,7 +19,7 @@
   where: >-
     Advanced Multimedia Research Lab, ICT Research Institute,
     University of Wollongong, Australia
-  detail: Designed and deployed a real-time prototype for upper-body motion analysis and automated clinical reporting using computer vision and GPT-4 assisted reporting workflows.
+  detail: Designed and deployed a real-time computer vision system integrating Jetson Orin AGX, Intel RealSense L515, and GPT-4-assisted workflows for upper-body motion analysis and automated clinical reporting.
 
 - when: Mar 2021 – Mar 2025
   title: PhD Candidate, Researcher
@@ -25,7 +27,10 @@
   where: >-
     Advanced Multimedia Research Lab, ICT Research Institute,
     University of Wollongong, Australia
-  detail: Artificial intelligence and image processing for human action recognition.
+  detail: |-
+    - Designed and implemented end-to-end human skeleton motion analysis models using Graph Convolutional Networks, Transformers, Masked Autoencoders, diffusion models, supervised learning, and self-supervised learning.
+    - Developed scalable Linux-based HPC pipelines for large-scale benchmarking, reproducible experimentation, model validation, ablation studies, and the complete research lifecycle from problem formulation and data preparation to evaluation and publication.
+    - Published research in Q1 journals, presented findings at conferences, collaborated across interdisciplinary research teams,
 
 - when: Oct 2019 – Apr 2021
   title: Research Engineer
